@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 
-mainClassName = 'controller.Main'
+mainClassName = 'views.Main'
 
 sourceCompatibility = 1.7
 version = '1.0'
@@ -37,7 +37,7 @@ jar {
     baseName = 'Uneaten-Leaves'
     version =  '1.0.1'
     manifest {
-        attributes 'Main-Class': 'controller.Main','Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+        attributes 'Main-Class': 'views.Main','Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
     }
 }
 task wrapper(type: Wrapper) {
