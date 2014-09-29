@@ -25,7 +25,7 @@ public class UserInputImpl implements UserInput {
 	public int[] caterpillarsPosition(String message) throws Exception {
 		int caterpillarArray[] = new int[0];
 
-		if (message.contains("0") || message.isEmpty()) {
+		if (message.contains("0") || message.isEmpty() || message.length()>15) {
 			return caterpillarArray;
 		}
 

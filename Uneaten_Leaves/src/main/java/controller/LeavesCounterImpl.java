@@ -12,23 +12,22 @@ public class LeavesCounterImpl implements LeavesCounter {
 	int multiplier = 1;
 	int eaten = 0;
 
-	public int uneatenLeavesCounter(int N, int[] j) {
-		for (int a : j) {
-			eaten = a * multiplier;
-			while (eaten <= N) {
-				if (eatenLeaves.isEmpty()
-						|| (!eatenLeaves.contains(eaten) && eaten <= N)) {
+	public int uneatenLeavesCounter(int leavesNumber, int[] caterpillarArray) {
+		for (int leaf : caterpillarArray) {
+			eaten = leaf ;
+			while (eaten <= leavesNumber) {
+				if (eatenLeaves.isEmpty() || (!eatenLeaves.contains(eaten) && eaten <= leavesNumber)) {
 					eatenLeaves.add(eaten);
 					multiplier++;
-					eaten = a * multiplier;
+					eaten = leaf * multiplier;
 				} else {
 					multiplier++;
-					eaten = a * multiplier;
+					eaten = leaf * multiplier;
 				}
 			}
 			multiplier = 1;
 		}
-		uneatenLeaves = N - (eatenLeaves.size());
+		uneatenLeaves = leavesNumber - (eatenLeaves.size());
 		return uneatenLeaves;
 	}
 
