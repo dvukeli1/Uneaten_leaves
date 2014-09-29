@@ -35,9 +35,8 @@ run{
 
 jar {
     baseName = 'Uneaten-Leaves'
-    version =  '1.0.1'
     manifest {
-        attributes 'Main-Class': 'views.Main','Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+        attributes 'Main-Class': 'views.Main','Implementation-Version': version
     }
 }
 task wrapper(type: Wrapper) {
